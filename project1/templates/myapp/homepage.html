@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<style>
+		
+		body{
+			background-color: black;
+		}
+		form{
+			
+			color: red;
+		}
+		h1{
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+<div class="container" align="center">
+	<h1>Ps Enter your Name Here</h1>
+	<form action="/collect/">
+		{{ form.as_p }}
+		{% csrf_token %}
+		<input type="Submit">
+		
+		
+	</form>
+	
+</div>
+</body>
+</html>
