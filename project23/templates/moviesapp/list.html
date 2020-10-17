@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>movies list</title>
+	<link rel="stylesheet" type="text/css" href="{% static "moviesapp/css/list.css" %}">
+</head>
+<body>
+	
+	<div class="container" align="center">
+		{% if movie_data %}
+		<marquee> Here is Your Movies Informations</marquee>
+			<table border="10">
+				<tr>
+					
+					<th>name</th>
+					<th>hero</th>
+					<th>heroine</th>
+					<th>director</th>
+					<th>producer</th>
+					<th>music</th>
+					<th>release</th>
+					
+				</tr>
+				{% for movie in movie_data  %}
+					<tr>
+						
+						<td>{{ movie.name }}</td>
+						<td>{{ movie.hero }}</td>
+						<td>{{ movie.heroine }}</td>
+						<td>{{ movie.director }}</td>
+						<td>{{ movie.producer }}</td>
+						<td>{{ movie.music }}</td>
+						<td>{{ movie.release }}</td>
+						
+					</tr>
+				{% endfor %}
+			</table>
+	{% else %}
+		<h1>no data to diplay</h1>
+	{% endif %}
+	</div>
+</body>
+</html>

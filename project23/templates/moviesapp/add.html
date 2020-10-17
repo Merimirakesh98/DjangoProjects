@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>addmovie</title>
+	<link rel="stylesheet" type="text/css" href="{% static "moviesapp/css/add.css" %}">
+</head>
+<body>
+	<h1 align="center"> Pls Add Your Movies Here</h1>
+	<div class="container" align="center">
+		<form method="POST">
+			{{ movie_form.as_p }}
+			{% csrf_token %}
+			<input type="Submit">			
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+	background: white;
+
+}
+marquee{
+	
+	color: red;
+	font-size: 60px;
+}
+table{
+	background: yellow;
+
+}
+tr{
+	background: yellow;
+	color: black;
+}
+th{
+	color: red;
+}
+td{
+	color: whites;
+}
